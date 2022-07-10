@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.Master.cs" Inherits="WebAppCas.Master" %>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/paper-dashboard.css" rel="stylesheet" />
+    <link href="assets/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
+    <link href="assets/css/MisCss.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper " style="background: #f4f3ef;">
+            <div class="sidebar" data-color="white" data-active-color="danger">
+                <div class="logo">
+                    <div class="simple-text logo-normal">
+                        <asp:Label ID="lblNombreUser" runat="server" Text=""></asp:Label>
+                        <asp:HiddenField ID="NoEmpleado" runat="server" />
+                    </div>
+                </div>
+
+                <div class="sidebar-wrapper">
+                    <ul runat="server" id="menu" class="nav">
+                        <li runat="server" id="li1">
+                            <asp:LinkButton ID="a1" runat="server" PostBackUrl="~/index.aspx"><i class="fas fa-home"></i>Bienvenida</asp:LinkButton>
+                        </li>
+                        <li runat="server" id="li2">
+                            <asp:LinkButton ID="a2" runat="server" OnClick="a2_Click" Visible="false"><i class="fas fa-users"></i>Usuarios</asp:LinkButton>
+                        </li>
+                        <li runat="server" id="li3">
+                            <asp:LinkButton ID="a3" runat="server" OnClick="a3_Click" Visible="false"><i class="fas fa-address-book"></i>Roles</asp:LinkButton>
+                        </li>
+                        <li runat="server" id="li4">
+                            <asp:LinkButton ID="a4" runat="server"  Visible="false"><i class="fas fa-shopping-cart"></i>Venta</asp:LinkButton>
+                        </li>
+                        <li runat="server" id="li5">
+                            <asp:LinkButton ID="a5" runat="server"  Visible="false"><i class="fas fa-tasks"></i>Iventario</asp:LinkButton>
+                        </li>
+                        <li runat="server" id="li6">
+                            <asp:LinkButton ID="a6" runat="server"  Visible="false"><i class="fas fa-file-contract"></i>Facturacíon</asp:LinkButton>
+                        </li>
+                        <li runat="server" id="li7">
+                            <asp:LinkButton ID="a7" runat="server" OnClick="a7_Click"><i class="fas fa-sign-out-alt"></i>Salir</asp:LinkButton>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-panel " style="background-color: #f4f3ef;">
+
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+
+
+                <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <nav class="footer-nav">
+                                <ul>
+                                </ul>
+                            </nav>
+                            <div class="credits ml-auto">
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--   Core JS Files   -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/popper.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <!-- Chart JS -->
+        <script src="assets/js/plugins/chartjs.min.js"></script>
+        <!--  Notifications Plugin    -->
+        <script src="assets/js/plugins/bootstrap-notify.js"></script>
+        <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+        <script src="assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+
+        <script src="assets/js/misJs.js"></script>
+    </form>
+</body>
+</html>
+<script>
+
+
+
+</script>
+
